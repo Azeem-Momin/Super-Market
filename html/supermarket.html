@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Market</title>
+    <!-- code for font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- code for linking css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- this is header section -->
+    <header class="header">
+        <a href="#" class="logo"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Grocery</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#feature">Feature</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#review">Review</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+
+        <!-- this is icons -->
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+        </div>
+
+        <!-- this is search box in header section -->
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+        <!-- this is shopping cart -->
+        <div class="shopping-cart">
+            <!-- 1st product -->
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="watermalon.jpg" width="80px" height="80px">
+                <div class="content">
+                    <h3>Watermalon</h3>
+                    <span class="price">Rs.70/-</span>
+                    <span class="quantity">Qty : 3</span>
+                </div>
+            </div>
+
+            <!-- 2nd product -->
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="amul.jpg" width="80px" height="80px">
+                <div class="content">
+                    <h3>Amul</h3>
+                    <span class="price">Rs.30/-</span>
+                    <span class="quantity">Qty : 4</span>
+                </div>
+            </div>
+
+            <!-- 3rd product -->
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="onion.png" width="80px" height="80px">
+                <div class="content">
+                    <h3>Onion</h3>
+                    <!-- <p class="price">Rs.40/-</p>
+                    <p class="quantity">Rs.40/-</p> -->
+                    
+                    <span class="price">Rs.40/-</span>
+                    <span class="quantity">Qty : 17</span>
+                </div>
+            </div>
+
+            <div class="total">Total : Rs.140/-</div>
+            <a href="#" class="btn">Checkout</a>
+        </div>
+    </header>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
