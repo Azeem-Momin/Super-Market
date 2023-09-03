@@ -27,6 +27,27 @@ body {
     background-color: rgb(228, 214, 214);
 }
 
+/* banner code */
+section{
+    padding: 2rem 9%;
+}
+
+/* below is general code for all heading such our features our products */
+.heading{
+
+    text-align: center;
+    /* padding: 2rem 0; */
+    font-size: 2rem;
+}
+
+.heading span{
+
+    background-color: var(--green);
+    color: white;
+    display: inline-block;
+    padding: 0.1rem .7rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
 /* below css is general for all buttons */
  .btn{
     border: 2px solid var(--black);
@@ -37,6 +58,15 @@ body {
     align-items: center;
     border-radius: 5px;
     color: var(--black);
+    background: none;
+    cursor: pointer;
+}
+
+ 
+
+.btn:hover{
+    background-color: var(--green);
+    color: white;
 }
 .header {
     background: #eee;
@@ -88,16 +118,36 @@ body {
 
 /* this is search bar */
 .header .search-form {
+
+    display: flex;
+    /* border: 1px solid; */
     position: absolute;
-    top: 140%;
-    right: -110%;
-    /* height: 50px; */
+    top: 110%;
+    right: -125%;
+    height: 2.5rem;
     background: white;
-    /* border-radius: .5rem; */
-    /* overflow: hidden; */
-    /* display: flex; */
-    /* align-items: center; */
+    width: 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    align-items: center;
     box-shadow: var(--box-shadow);
+}
+
+.header .search-form input{
+
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.header .search-form label{
+
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
 }
 
 /* this is when we click search bar then what happens */
@@ -106,12 +156,14 @@ body {
     transition: .3s linear;
 }
 
-.header #search-box {
+/* .header #search-box {
     height: 30px;
     width: 500px;
 
-}
+} */
 
+
+/* shopping cart element */
 .header .shopping-cart{
     /* border: 2px solid ; */
     margin-top: 20px;
@@ -182,4 +234,228 @@ body {
 .header .shopping-cart.active{
     right: 2rem;
     transition: .4s linear;
+}
+
+/* login form */
+.header .login-form{
+
+    border: 0px solid;
+    position: absolute;
+    width: 20rem;
+    top: 110%;
+    right: -110%;
+    border-radius: .5rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 1rem ;
+}
+
+.header .login-form.active{
+
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .login-form h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-top: .3rem;
+}
+
+.header .login-form .box{
+
+    border: 0px solid;
+    width: 100%;
+    background-color: #eee;
+    margin: .7rem 0;
+    padding: .8rem;
+    border-radius: .5rem;
+    color: var(--black);
+    text-transform: none;
+    font-size: 1rem;
+}
+
+/* this will hide menu button in nav bar */
+#menu-btn{
+
+    display: none;
+}
+
+.header .navbar.active{
+
+    right: 2rem;
+    transition: .3s linear;
+}
+
+
+
+/* media query is use to make website responsive */
+@media (max-width:991px) {
+    
+    html {
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:770px) {
+    
+    .header .navbar {
+
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: white;
+    }
+
+    /* this will show menu bar on width less than or equal to 770px */
+    #menu-btn{
+        display: inline-block;
+    }
+
+    /* this is to set search bar in small screen */
+    .header .search-form{
+        width: 80%;
+    }
+
+    .header .navbar a{
+
+        font-size: 2rem;
+        display: block;
+        margin: 2rem 2.5rem;
+    }
+
+}
+@media (max-width:450px) {
+    
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:280px){
+
+    .header .shopping-cart{
+        width: 90%;
+    }
+}
+
+
+/* below is styling of banner */
+.home{
+
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    background: url('banner2');
+    background-position: center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.home .content{
+    text-align: center;
+    width: 50rem;
+}
+
+.home .content h3{
+
+    font-size: 2rem;
+}
+
+.home .content h3 span{
+
+    color: var(--green);
+}
+
+.home .content p{
+
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+/* this is feature */
+.features .box-container{
+
+    /* border: 2px solid; */
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem ,1fr));
+    gap: 1.5rem;
+
+}
+
+.features .box-container .box{
+
+    text-align: center;
+    padding: 2rem;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+}
+
+.features .box-container .box:hover{
+     box-shadow: 1px 1px 10px 6px var(--green);
+}
+
+.features .box-container .box h3{
+
+    font-size: 1.8rem;
+}
+
+.features .box-container .box p{
+
+    font-size: 1rem;
+
+}
+
+/* this is "our product" styling */
+.products .product-slider{
+    /* border: 1px solid red; */
+    padding: 1rem;
+}
+
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+}
+
+.products .product-slider .box{
+
+    /* border: 1px solid red; */
+    background: white;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.products .product-slider .box:hover{
+    box-shadow: 1px 1px 10px 6px var(--green);
+}
+
+.products .product-slider .price{
+
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.products .product-slider .stars i{
+
+    font-size: 1.3rem;
+    color: orange;
+    padding-top: .5rem;
 }
